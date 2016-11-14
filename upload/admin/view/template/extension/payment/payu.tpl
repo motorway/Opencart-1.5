@@ -105,7 +105,10 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label" for=""><?= $entry_vat; ?></label>
                 <div class="col-sm-10">
-                  <input type="text" name="payu_vat" value="<?= ($payu_vat == "") ? 0 : $payu_vat; ?>" class="form-control" />
+                  <select name="payu_vat" class="form-control">
+                    <option value="0" <?= $payu_vat != '19' ? 'selected="seleted"' : '' ?>>0%</option>
+                    <option value="19" <?= $payu_vat == '19' ? 'selected="seleted"' : '' ?>>18%</option>
+                  </select>
                 </div>
               </div>
 
